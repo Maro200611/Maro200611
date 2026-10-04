@@ -7,7 +7,7 @@ const PORTFOLIO = {
   focusTitle: "Data Science & AI",
   focusText: "Currently developing stronger foundations in Python, data analysis, machine learning and software development.",
   focusList: ["Data Analysis & Visualization", "Machine Learning Foundations", "Python & Programming", "Algorithms & Problem Solving"],
-  cvUrl: "assets/Marwan-Khaled-CV.pdf",
+  cvUrl: "cv.html",
   timeline: [
     {icon:"bi-mortarboard", date:"2024 — Present", title:"B.Sc. Computer Science", org:"Canada International College (CIC)", text:"Computer Science student building foundations in programming, algorithms, databases and AI."},
     {icon:"bi-cpu", date:"2026", title:"AI & Machine Learning Foundations", org:"Information Technology Institute (ITI)", text:"Completed 90 training hours covering AI, probability & statistics, linear algebra, optimization, Python, data preparation, neural networks and deep learning."},
