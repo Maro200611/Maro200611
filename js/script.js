@@ -7,6 +7,13 @@ const PORTFOLIO = {
   focusTitle: "Data Science & AI",
   focusText: "Currently developing stronger foundations in Python, data analysis, machine learning and software development.",
   focusList: ["Data Analysis & Visualization", "Machine Learning Foundations", "Python & Programming", "Algorithms & Problem Solving"],
+  cvUrl: "assets/Marwan-Khaled-CV.pdf",
+  timeline: [
+    {icon:"bi-mortarboard", date:"2024 — Present", title:"B.Sc. Computer Science", org:"Canada International College (CIC)", text:"Computer Science student building foundations in programming, algorithms, databases and AI."},
+    {icon:"bi-cpu", date:"2026", title:"AI & Machine Learning Foundations", org:"Information Technology Institute (ITI)", text:"Completed 90 training hours covering AI, probability & statistics, linear algebra, optimization, Python, data preparation, neural networks and deep learning."},
+    {icon:"bi-search", date:"2026", title:"Machine Learning Intern", org:"FlyRank", text:"Working on Applied Search Intelligence with a focus on Google Search ranking and Discoverability signals."},
+    {icon:"bi-rocket-takeoff", date:"2026", title:"Data Science Track", org:"Digital Egypt Pioneers Initiative", text:"Accepted into the Data Science track to strengthen practical data science and career-ready skills."}
+  ],
   stats: [
     ["03+", "Years of CS journey"],
     ["AI / ML", "Current direction"],
@@ -51,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#focusText").textContent = PORTFOLIO.focusText;
   $("#profileImage").src = PORTFOLIO.profileImage;
   $("#year").textContent = new Date().getFullYear();
+  const cvBtn = $("#cvBtn"); if(cvBtn) cvBtn.href = PORTFOLIO.cvUrl;
+  $("#timeline").innerHTML = PORTFOLIO.timeline.map((x,i)=>`<div class="timeline-item" data-aos="fade-up" data-aos-delay="${i*70}"><div class="timeline-icon"><i class="bi ${x.icon}"></i></div><div class="timeline-content"><span>${x.date}</span><h3>${x.title}</h3><strong>${x.org}</strong><p>${x.text}</p></div></div>`).join("");
 
   $("#stats").innerHTML = PORTFOLIO.stats.map(s => `<div class="col-4"><div class="mini-stat"><strong>${s[0]}</strong><small>${s[1]}</small></div></div>`).join("");
   $("#focusList").innerHTML = PORTFOLIO.focusList.map(x => `<div><i class="bi bi-check2-circle"></i><span>${x}</span></div>`).join("");
